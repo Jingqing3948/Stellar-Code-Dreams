@@ -395,7 +395,7 @@ c(yes)->o2->e
 c(no)->o3->e
 ```
 
-![image-20240909140211643](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091402814.png)
+<img src="https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091402814.png" alt="image-20240909140211643" style="zoom:50%;" />
 
 
 ```c
@@ -479,8 +479,7 @@ else
 如分段函数。这时可以用级联的else if 表达多种情况
 每个else是前一个if的else，但是前面两个都不满足的话就只剩下第三个了
 
-```mermaid
-flowchat
+```flow
 st=>start: 开始
 i=>inputoutput: 输入
 o=>inputoutput: 输出
@@ -496,6 +495,8 @@ c1(no)->c2
 c2(yes)->o2->en
 c2(no)->o3->en
 ```
+<img src="https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091406857.png" alt="image-20240909140606691" style="zoom:50%;" />
+
 其实相当于：
 
 ```c
@@ -684,6 +685,8 @@ c(yes)->oe->e
 c(no)->o2(right)->i
 ```
 
+<img src="https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091406245.png" alt="image-20240909140635061" style="zoom:50%;" />
+
 循环的条件是a!=number
 用函数rand()召唤随机整数
 使用方法：
@@ -709,8 +712,7 @@ int main()
 num:我们需要读到的那一个数。
 sum(总和)：每读到一个数把他加到sum里就完事了
 另一个变量count记录累加的次数，最后算平均数÷count
-```mermaid
-flowchat
+```flow
 st=>start: sum=0,cnt=0
 i1=>inputoutput: 读num
 c=>condition: num!=-1?
@@ -722,7 +724,7 @@ c(yes)->o->i1
 c(no,left)->op->e
 ```
 
-
+<img src="https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091407986.png" alt="image-20240909140709793" style="zoom:50%;" />
 
  注意转化成浮点数来求平均值。
 浮点数转化方法： 1.0*sum/count
@@ -759,7 +761,8 @@ still, 可以尝试细节。
 如果出现可以整除，isprime=0;break;
 break:结束循环
 continue:可以跳过此循环剩下的部分，进入下一轮循环
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201210204728145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091407185.png)
 
  
 
@@ -961,7 +964,7 @@ int i,a,j,k,cnt=0;
         i++;
     }
  ```
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704210542652.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091407401.png)
 
 ## 水仙花数
 
@@ -977,7 +980,7 @@ int i,a,j,k,cnt=0;
 
 ## 打印乘法口诀表
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201215143203579.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091408039.png)
 
 a*b，a、b两重循环。
 还要注意对齐问题。如果结果是一位数，输出两个空格；两位数输出一个空格。
@@ -1079,7 +1082,7 @@ sizeof(int)=4;//由编译器决定，通常代表“1个字”
 sizeof(long)=4;//由编译器决定，通常代表“1个字”
 sizeof(long long)=8;//long long 8字节
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201217163149797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091408416.png)
 
 说一台计算机的字长的时候，我们指的是寄存器RAM是多少字长（比特）的。
 每一次从CPU中取数据取32个比特
@@ -1145,7 +1148,8 @@ unsigned使得这个类型在正整数表达部分范围扩大一倍，但是不
 Similarly,想表达自己是个long,后面加`l`
 unsigned的初衷不是为了扩展数能表达的范围，而是为了做纯二进制运算，主要是为了移位。
 整数是以纯二进制方式进行运算的。
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201218001911386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091408178.png)
 
 补码就是顺时针-，逆时针+
 ```c
@@ -1167,7 +1171,9 @@ c--;
 ```
 得到255。
 所以对于unsigned，也是顺时针-，逆时针+
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201218001926886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091408974.png)
+
 ```c
 int a=0,b=1;
 while(++a>0);
@@ -1260,7 +1266,8 @@ f1==f2不一定成功，应该写`fabs(f1-f2)<1e-12`
 [Android计算器低级错误？都是二进制惹的祸！](https://www.guokr.com/article/27173/)
 而传统计算器直接用整数做运算
 而浮点数内部是编码形式
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201218003830483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091409482.png)
 
 从左到右分别表示正数负数、指数、小数
 如果没有特殊需要，就用double
@@ -1288,7 +1295,8 @@ scanf("%d %c",&i,&c);
 `int i='Z'-'A';`//两个字符相减，得到它们在表中的距离
 字母在ASCII表中顺序排列，且大小写字母分开排列
 `'a'-'A'`可以得到小写字母与大写字母之间的距离，所以`'a'+('A'-'a')`可以转小写为大写
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210705220127970.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091409371.png)
 
 ## 逃逸字符
 
@@ -1309,7 +1317,8 @@ printf("请分别输入身高的英尺和英寸，""如输入\"5 7\"表示5英�
 printf("123\b\n456\n"); 
 ```
  得到结果：
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201218181947242.png)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091409355.png)
 
 但是到了其他程序那边运行
 123
@@ -1325,7 +1334,7 @@ BS是回到上一格，没输出东西就什么结果都没有，输出了就把
  printf("123\t456\n");
  printf("12\t456\n");
  ```
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201218182117390.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091409096.png)
 
 \n换行\r回车，源自打字机的动作
 一直敲键盘，打字机的轴就往左移
@@ -1514,13 +1523,17 @@ int main()
 
 ## 函数原型：用来告诉编译器这个函数长什么样
 
-使用函数的先后顺序：先写函数再调用。![在这里插入图片描述](https://img-blog.csdnimg.cn/20201219230956156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+使用函数的先后顺序：先写函数再调用。
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091409443.png)
+
 可以先想象成数学函数`y=f(x)`
 C的编译器自上而下分析你的代码，它会记住函数`sum()`长什么样子要几个参数，每个参数的类型如何，返回什么类型
 如果把函数放在后面，C语言可能会猜，你在`main`函数里使用的这个函数是什么类型。如果后面发现后面的函数类型和它猜测的不符，就输出`error` 。
 因此也可以先不用写完函数，光把一句函数头放到前面编译也能通过。
-（事先声明了函数的样子）
+（事先声明了函数的样子)
 下面函数还会判断一下和你之前的声明是否一致
+
 ```c
 void sum(int begin,int end);//声明
 
@@ -1678,7 +1691,8 @@ double weight[20];
 一旦创建，不能改变大小；
 其中元素在内存中连续依次排列（从0开始）；
 如：定义十个单元a[10]→a[0]~a[9]
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210106133313945.png)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091410359.png)
 
 每个单元就是一个int类型的变量。像普通变量一样可以出现在赋值的左边或右边。*左边的叫左值，右边的叫右值。*
 数组的每个单元就是数组类型的一个变量。使用数组时[]中的数字/变量叫下标或索引，从0开始计数
@@ -1838,7 +1852,7 @@ while(count<number){
  	printf("\n");
  }
  ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202101061824553.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091410687.png)
 
 换一个思路，使得最后这张表里留下来的数都是素数。
 欲构造n以内的素数表：
@@ -1878,10 +1892,12 @@ while(count<number){
 ## 二维数组
 
 `int a[3][5];`通常理解为a是一个3行5列的矩阵
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210106182540563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091410982.png)
 
 最好先行号再列号，和线性代数也是相对应的。
 二维数组的遍历需要两个for循环
+
 ```c
 int a[][5]={
 	{0,1,2,3,4},
@@ -2047,7 +2063,7 @@ int divide(int a,int b,int *result)
 
 ## 指针与数组：为什么数组函数之后的sizeof不对了
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021012110484493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091410234.png)
 
 sizeof(a)（a是个数组）返回的是int*的sizeof，而不是int []的sizeof
 如果我们在minmax函数中改变a[0]的值，在main()函数中a[0]的值也会被改变，和指针一样。
@@ -2820,13 +2836,20 @@ rp->pt1.x
 (r->pt1).x
 //但是不能写r->pt1->x,因为pt1不是指针而是结构。
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210321211749511.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091411183.png)
+
 如上图所示，rp指向r。
 甚至可以做结构里的结构里的数组。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210321211941973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210321212110996.png)
-（这里也能看出这么写会好看很多~）
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091411887.png)
+
+
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412098.png)
+
+（这里也能看出这么写会好看很多~)
 
 ##  类型定义
 
@@ -2866,13 +2889,15 @@ xxx2.b='c';
 比如一个int 4个字节，也可以被看做是char的数组0~3
 比如char是1234，则转化为十六进制应该是00 00 04 D2
 我们通过下面的方法来看看是不是这么储存的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210327000411512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412232.png)
+
 占位符的意思是：1.输出两位，即如果不足10要补个0（比如2→02）
 2.这就是一个字节了，不要再扩展了
 3.以十六进制输出
 这个在文件那里还会再讲。
 我们现在的X86是小端机器，放数的时候其实是小端在前
-也是很有用的，比如做文件时，比如当我们要把一个整数以二进制形式输到一个文件中去时，可以作为中间的媒介（没懂……）。
+也是很有用的，比如做文件时，比如当我们要把一个整数以二进制形式输到一个文件中去时，可以作为中间的媒介（没懂……)。
 
 # 12. 全局变量
 
@@ -3049,7 +3074,9 @@ main中默认a,b是int→传入double 的max→以int形式传回来，链接的
 注意到#include后面的括号有两种：
 ""：先去找系统内指定目录有没有这个头文件，没有再去当前目录找。
 <>：只在系统内找这个头文件。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210405152044555.png)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412813.png)
+
 这样查看stdio.h里都有什么
 关于#include的误区：#include不是用来引入库的。而是**原封不动地把库里的东西插入到这一行来**
 stdio.h里只有printf的原型，其代码在另外的地方。比如windows在.lib里，unix在.a里。而stdlib.h里有malloc的原型
@@ -3127,7 +3154,7 @@ flag：标志，有以下几种
 | s                                                            | 字符串                         |
 | p                                                            | 指针                           |
 | n                                                            | 读入/写出的个数                |
-| ![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/6c7df1265cac54661ecbc7d56f261a38.png) |                                |
+| ![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412206.png) |                                |
 | %n是当操作做到这里时，已经输出了多少个字符，并且填到指针所指的变量里。 |                                |
 | scanf: `%[flag]type`                                         |                                |
 | flag                                                         | 含义                           |
@@ -3154,7 +3181,7 @@ flag：标志，有以下几种
 | %i会根据输入（如0x12、012）来判断是十六进制还是八进制还是十进制。 |                                |
 | [...]举例                                                    |                                |
 | GPS中会读到一串字符，用逗号分隔                              |                                |
-| ![在这里插入图片描述](https://img-blog.csdnimg.cn/c5275fbd01b84b269fc5941013c21ef1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70) |                                |
+| ![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412977.png) |                                |
 | 占位符`%[^,]`表示读入逗号前的所有字符                        |                                |
 | printf和scanf是有返回值的。scanf是返回几个item，即这次读入了几个**变量**；而printf则是这次输出了多少个**字符**。因此当我们面对要求严格的程序，比如长期运行的大程序，就需要判断每次调用scanf和printf的返回值来了解程序运行中是否会存在问题。 |                                |
 
@@ -3167,8 +3194,11 @@ flag：标志，有以下几种
 （当然还可以./test < 12.in > 12.out，输入是文件，输出也是文件。12.out里也有我们所期望的结果。）
 以上是程序运行中的重定向。我们用<来指定一个文件的输入，用>来指定输出到一个文件中。
 然而这并不是一般的文件输入输出方式，一般的方式需要做一个FILE，在stdlib.h中已经声明好过。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7833df6bba82491a905fb29beb0a3fb4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091412543.png)
+
 用fopen打开文件打开后用fscanf和fprintf函数来读写。
+
 ```c
 FILE* fp=fopen("file","r");//file是文件名，r表示读
 if(fp){//如果没打开，会返回NULL
@@ -3200,16 +3230,20 @@ PC和DOS刚开始的时候能力有限，二进制更加接近底层。
 二进制的缺点是人类读写困难而且不跨平台；（如不同计算机int大小不一致）优点是读写快。
 在这里，我们要回顾下为什么程序要使用文件。
 1. 有配置（比如窗口大小、字体颜色）UNIX用文本文件就能编辑，Windows是用一个大文件：注册表编辑。
+
 2. 数据：保存数据，如学生成绩。稍微大一些的数据都放数据库那了。
+
 3. 媒体：如图片音频，这些不能是文本文件，只能是二进制文件。
-其实现在程序通过第三方库来读写文件，很少直接读写二进制文件了。
-对二进制的读写
-![在这里插入图片描述](https://img-blog.csdnimg.cn/315f53aa992043e0b61922ea6c69283d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
-第一个参数是指针，要读写的内存；第二个参数是那块内存（一个结构）的大小；第三个参数是有几个这样的内存，第四个参数是文件指针。返回成功读写的字节数。
-因为二进制文件的读写一半是通过对一个结构变量的操作来进行的，所以nitem就是用来说明这次读写了几个结构变量。
-这里老师做了一个非常有意思的东西，建议去看看（我懒了）
-fwrite可以把数据以二进制形式写到文件中，fread类似。
-定位：找出现在处在文件中的位置，或跳到指定位置。
+  其实现在程序通过第三方库来读写文件，很少直接读写二进制文件了。
+  对二进制的读写
+
+  ![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413973.png)
+
+  第一个参数是指针，要读写的内存；第二个参数是那块内存（一个结构）的大小；第三个参数是有几个这样的内存，第四个参数是文件指针。返回成功读写的字节数。
+  因为二进制文件的读写一半是通过对一个结构变量的操作来进行的，所以nitem就是用来说明这次读写了几个结构变量。
+  这里老师做了一个非常有意思的东西，建议去看看（我懒了)
+  fwrite可以把数据以二进制形式写到文件中，fread类似。
+  定位：找出现在处在文件中的位置，或跳到指定位置。
 ```c
 long ftell(FILE *stream);
 int fseek(FILE *stream, long offset, int whence);
@@ -3267,39 +3301,53 @@ i<<j：i中所有位向左移动j个位置，右边填入0
 
 ## 位运算例子
 有什么用处？
-例1：输出一个数字的二进制![在这里插入图片描述](https://img-blog.csdnimg.cn/a53db9fa01cc4a4eb879f037023e958c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+例1：输出一个数字的二进制
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413081.png)
+
 unsigned后面没有跟类型，则是默认为unsigned int。
 mask依次是
 1000 0000
 0100 0000
 0010 0000
 ...
-![在这里插入图片描述](https://img-blog.csdnimg.cn/65a8051495764a2591e167e33f00a79d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413240.png)
+
 这样每一位依次取余，看每一位。
 另外一件事：做单片机时常遇到这样的特殊功能寄存器（SFR）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e496aecfb5674ba4b1032c73ce6af982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413638.png)
+
 怎么把对应比特置为0或1？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ea1897a45ee46c58fa0dfb8b34e8939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413140.png)
+
 第几位就是1u<<几
 如SBS是1，左移2位是100
 PE是1，左移3位是1000
    100
  1000
- 1100（或后得到的结果）
+ 1100（或后得到的结果)
  用或使某些比特为1，用和使某些比特为0。
+
 ## 位段
 在SFR表中可知，有的也不止一个比特。但之前的技巧只能控制一个比特。
 如何控制多个比特？位段，把一个int的若干位组合成一个结构。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b55e7fbca914f539618dadfe3e240ee.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091413386.png)
+
 冒号后面的数字表示 该成员占几个比特。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f5dd64930a3484e82e04f80d8e3a193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414028.png)
+
 prtBin函数就是刚刚看过的输出二进制位。 
 输出：sizeof(uu)=4
 二进制输出后五位10010
 当我们把uu.trailing=0注释掉后，sizeof(uu)没变，但是二进制位输出变了。后五位仍然是10010，前面没有赋初值（没有让trailing=0），是乱七八糟的0和1.
 当我们int trailing=32，仍然让uu.trailing=0，这时sizeof(uu)=8（所有位数加起来超过了32，所以用两个int来表达）二进制输出仍然只有后五位10010.
 位段可以直接用位段的成员名称来访问，比移位、与、或还要方便。
-编译器会安排其中的位的排列，不具有可移植性（比如老师的例子是从最右边排起，可能自己试验时会从最左边排。）所需要的位超过一个int时会安排多个int。
+编译器会安排其中的位的排列，不具有可移植性（比如老师的例子是从最右边排起，可能自己试验时会从最左边排。)所需要的位超过一个int时会安排多个int。
 总而言之，位段是操作和硬件相关的底层操作。
 
 # 14. 可变数组
@@ -3308,13 +3356,16 @@ resizable array
 growable 可变大的
 get the current size 能知道现在的大小
 access to the elements 能访问其中单元
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90ec8639fe1f41d5961988f135cd0a28.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414557.png)
+
 create：创建数组
 free：回收数组空间
 size：告知单元数量
 at：访问某个单元
 inflate：长大
 结构Array 包括*array指针和size大小。
+
 ```c
 Array array_create(int init_size){
 	Array a;
@@ -3395,8 +3446,13 @@ while(number!=-1)
 3. 如果我们每次都只申请一块block大的内存，把他们链起来，不需要拷贝了节约时间，也可以充分利用给内存的每一块。
 
 # 15. 链表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a787a8aaa9d1420db7ad02d26aab0149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414665.png)
+
 实际上的解决方法是每一块都分为两部分，前一块是数据，后一块是指针，指向下一块。然后还需要指向开头的head，以及结尾不指向任何东西(NULL)。这就是链表（linked-list）。每个块就是结点。
+
 ```c
 typedef struct _node{
 	int value;
@@ -3445,12 +3501,13 @@ while(last->next)last=last->next;//找到结尾last结点
 last->next=p;
 ```
 
-
 但是head=p是有问题的，head的值并没有得到修改。如果想不通，可以阅读作者的[另一篇文章](https://blog.csdn.net/jtwqwq/article/details/119529824)，里面有写作者自己的一些理解。
 如果我们把head放在外面作为一个全局变量？不好，在全局变量时讲过，不要用head做全局变量。因为add只能对这个链表的head起作用，如果程序中出现其他链表，不能再做操作。
 **方案2**：如果add函数返回指针，然后return 理想的head指针，在函数中令head=add函数呢？不错。
 **方案3**：传给add的参数不再是head，而是head的地址。我们知道通过指针可以直接修改该地址中的值。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d58d8a0f6b6143be96948ce6ebf1ed90.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414951.png)
+
 **方案4**：我们定义一个结构list，其中包含*head。在原函数中定义list，list.head=NULL；然后把list的指针`&list`传入add函数，add的参数是list的指针，在函数中就可以对list->head进行修改。
 
 方案4的好处在于我们用自己定义的list结构来代表整个链表。除了定义的这个head，还可以有tail指向结尾，这样每次last不用遍历整个链表才能找到结尾；等等。
@@ -3473,20 +3530,23 @@ for(p=list.head;p;p=p->next)
 }
 ```
 
-
-
 ## 链表的删除
 删除某个值，我们要做两件事。
 第一，前面的指针指向他后面的值。
 第二，free it.
 也就是说，如果前面的指针是q，我们要删除的部分指针是p，则要q=p,p=p->next。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cea76557c5ab45d2978ed5c2f71e1109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414579.png)
+
+
 
 怎么考虑到边界情况？
 **一个很重要的思想**：
 判断出现在arrow箭头左边的指针变量是否是NULL。如图中for循环内出现了p->next，p->value，q->next.因为在for循环中判断了p会不会是空指针，所以p->是安全的。但是q->next就不安全了，没有判断q是否是NULL。
 也就是说当要删除的节点p是第一个时，q=NULL，这就是边界情况。这时可以让head等于所指的next。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/74365d3720d047f3bb9855a838ed2065.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091414558.png)
+
 最后别忘记`free(p)`.
 
 
