@@ -55,7 +55,8 @@ int main()
 ## 为什么编程入门从C学起？
 
 [语言排行](https://www.tiobe.com/tiobe-index//)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210714003556146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091357936.png)
 
 1) 在很多场合，C语言是唯一的选择
 2) 现代编程语言在语法上差异很小，基本都和C接近
@@ -73,8 +74,9 @@ FORTRAN→BCPL→B语言→C语言
 C语言还受到了PL/I（和底层系统很接近，可以拿来做操作系统等）的影响，还和 PDP-II的机器语言有很大关系
 1973/3，第三版的Unix上出现了C语言的编译器
 1973/11，第四版的Unix完全用C语言重新写的。
-![经典C，又叫K&R the C](https://img-blog.csdnimg.cn/20201127221048977.png)
-*经典C，又叫K&R the C*
+
+![经典C，又叫K&R the C](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091359803.png)
+
 1989年，ANSI发布了一个标准：ANSI C
 1990年，ISO接受了ANSI的标准：C89
 C的标准在1995年和1999年两次更新：C95和C99。现在的编译器都基于C99了，因此本课程也是。
@@ -89,7 +91,8 @@ C语言是一种工业语言，由基础人员使用。所以：
 C语言需要被编译才能运行，所以需要：编辑器和编译器
 （或者IDE，Integrated Development Environment集成开发环境，一个顶俩）
 推荐的编程软件：Dev C++。免费，安装简单，还不用建工程。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210714004554282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091400096.png)
 
 
 # 2. 入门：从Hello World开始
@@ -249,7 +252,8 @@ printf("a/b*3");//改进为a/b*3.0
 一个表达式是一系列运算符和算子的结合，用来计算一个值
 运算符(operator)是指进行运算的动作，比如加/减法运算符+-
 算子(operand)是指参与运算的值，可能是常数/变量/一个方法的返回值
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201128140525222.png)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091400287.png)
 
 
 计算时间差：这里只记录分钟错位的情况（1:40和2:10）
@@ -321,11 +325,11 @@ b=c;
 
 断点
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201128141427591.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
-
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091400676.png)
 
 DEV C++中，在左边数字那里点击一下，然后程序运行时就会在这一行停止。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112814144933.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p0d3F3cQ==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091400256.png)
 
  运行也只能到这一行
 点下一行，就会运行到下一行。
@@ -338,8 +342,9 @@ DEV C++中，在左边数字那里点击一下，然后程序运行时就会在�
 类似有`-=`，`*=`，`/=`
 （`a*=b+5`表示`a=a*(b+5)`,如果想先算`a=a*b`记得加括号）
 INC递增、DEC递减运算符：`++`，`--`：单目运算符，只能有一个算子，这个算子还只能是变量（如`a++`后缀形式，`++a`前缀形式）让该变量+1/-1；
-`a++`运算式的值是a+1以前的值；`++a`运算式的值是a+1以后的值。无论哪个，a的值都+1了
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201128141516408.png)
+`a++`运算式的值是a+1以前的值；`++a`运算式的值是a+1以后的值。无论哪个，a的值都+1了。
+
+![在这里插入图片描述](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091400282.png)
 
 `++`和`--`可以单独使用，但不要把它组合进表达式，复杂。
 
@@ -389,6 +394,8 @@ st->i1->i2->o1->c
 c(yes)->o2->e
 c(no)->o3->e
 ```
+
+![image-20240909140211643](https://raw.githubusercontent.com/Jingqing3948/FigureBed/main/mdImages/202409091402814.png)
 
 
 ```c
@@ -3234,7 +3241,7 @@ SEEK_END 从末尾开始*/
  1. 让某一位或某些位=0，如x & 0xFE（1111 1110） 会让最后一位变为0
  2. 取某个数中的某一段：如x & 0xFF (在32位int中是 0000 0000 0000 0000 0000 0000 1111 1111）这样只会留下最后8位
  按位或
-  应用：
+    应用：
 
  1. 使得某一位/某几位变为1： x | 0x01
  2. 把两个数拼起来： 0x00FF | 0xFF00
