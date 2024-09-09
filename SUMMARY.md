@@ -6,7 +6,7 @@
 - [RFID](Course_ZH/RFID.md)
 ## 物联网英方课程
 
-- [MySQL 数据库](MySQL-数据库.md)
+- [MySQL 数据库](Course_EN/MySQL-数据库.md)
 
 - [Microprocessor 微处理器](Course_EN/Microprocessor-微处理器.md)
 - [Software Engineering 软件工程](Course_EN/SoftwareEngineering-软件工程.md)
