@@ -3,6 +3,7 @@
 ## 物联网中方课程
 - [README](Course_ZH/README.md)
 - [计算导论与程序设计-翁恺C语言网课](Course_ZH/计算导论与程序设计-翁恺C语言网课.md)
+- [RFID](Course_ZH/RFID.md)
 ## 物联网英方课程
 - [Microprocessor 微处理器](Course_EN/Microprocessor-微处理器.md)
 - [Software Engineering 软件工程](Course_EN/SoftwareEngineering-软件工程.md)
